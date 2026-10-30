@@ -1,0 +1,87 @@
+import React, { useState } from 'react'
+import GmailLogo from "../Assets/Gmail.png";
+import PhoneLogo from "../Assets/Phone.png"
+import FacebookLogo from "../Assets/Facebook.png"
+import Instagram from "../Assets/Instagram (2).png"
+import Github from "../Assets/Github2.png"
+import Twitter from "../Assets/Twitter.png"
+import Linkedin from "../Assets/LinkedIn (2).png"
+
+import { db } from "../firebase";
+import { ref, set } from "firebase/database";
+import {motion} from "framer-motion"
+import { Element } from 'react-scroll';
+
+const ContactMe = ({fadeInAnimationSection }) => {
+  const [ContactForm, setContactForm] = useState({
+    User_Name: "",
+    User_Email: "",
+    User_Message: "",
+  });
+  const handleInput = (e) => {
+    const Name = e.target.name;
+    const Value = e.target.value;
+    setContactForm({ ...ContactForm, [Name]: Value });
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (ContactForm.User_Email && ContactForm.User_Name && ContactForm.User_Message) {
+      set(ref(db, `${ContactForm.User_Name}_${Math.floor(Math.random() * 1000)}`),
+        {
+          User_Name: ContactForm.User_Name,
+          User_Email: ContactForm.User_Email,
+          User_Message: ContactForm.User_Message,
+        }
+      ).then(() => {
+        alert("We Will Contact you in few Hours");
+        setContactForm({
+          User_Name: "",
+          User_Email: "",
+          User_Message: "",
+        })
+      })
+    } else {
+      alert("Fill Form Properly")
+    }
+
+  }
+  return (
+    <Element name="Contact" id="Contact">
+      <motion.div
+        variants={fadeInAnimationSection}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+      >
+      <div id="ContactMEinner">
+        <div id='ContactMeDetails'>
+          <h1>Contact Me</h1>
+          <div>
+            <img src={GmailLogo} alt='Logo' />
+            <p>ragini2467singhal@gmail.com</p>
+          </div>
+          <div>
+            <img src={PhoneLogo} alt='Logo' />
+            <p>+91-8448968259</p>
+          </div>
+          <a href="https://drive.google.com/file/d/1LBIicbPUxcNj-MN7nJ1MogcpxniU67mz/" target='_blank' rel="noreferrer">
+            <button>Download CV</button>
+          </a>
+        </div>
+        <form id='ContactMEForm' method='POST'>
+          <input type='text' placeholder='Your Name' name='User_Name' onChange={handleInput} value={ContactForm.User_Name} />
+          <input type='email' placeholder='Your Email' name='User_Email' onChange={handleInput} value={ContactForm.User_Email} />
+          <textarea placeholder='Your Message' name='User_Message' onChange={handleInput} value={ContactForm.User_Message}></textarea>
+          <input type='submit' value="Send Message" onClick={handleSubmit} />
+        </form>
+      </div>
+      
+      </motion.div>
+    </Element>
+  )
+}
+
+export default ContactMe
