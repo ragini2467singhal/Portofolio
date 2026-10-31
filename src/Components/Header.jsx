@@ -564,12 +564,8 @@ const Header = () => {
           })}
 
           <li>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
-              RESUME
+          <a href="https://drive.google.com/file/d/1LBIicbPUxcNj-MN7nJ1MogcpxniU67mz/" target='_blank' rel="noreferrer">
+                        RESUME
             </a>
           </li>
         </ul>

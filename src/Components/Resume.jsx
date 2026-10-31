@@ -113,7 +113,7 @@ const Div = ({ MainHeading, data }) => {
   );
 };
 
-const Resume = ({ setActiveNavbar }) => {
+const Resume= ({ setActiveNavbar }) => {
   const data1 = [
     {
       id: "adfaf",
@@ -189,7 +189,7 @@ const Resume = ({ setActiveNavbar }) => {
   return (
     <Element name="AboutME" id="Resume">
       {/* <section id="Resume" onMouseEnter={() => setActiveNavbar("AboutME")}> */}
-      <SectionHeader heading={"Resume"} />
+      <SectionHeader heading={"ABOUT ME"} />
       <div id="ResumeContainer">
         <div>
           <Div MainHeading={"Summary"} data={data1} />

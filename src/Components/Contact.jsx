@@ -68,7 +68,7 @@ const ContactMe = ({fadeInAnimationSection }) => {
             <p>+91-8448968259</p>
           </div>
           <a href="https://drive.google.com/file/d/1LBIicbPUxcNj-MN7nJ1MogcpxniU67mz/" target='_blank' rel="noreferrer">
-            <button>Download CV</button>
+            <button>Download Resume</button>
           </a>
         </div>
         <form id='ContactMEForm' method='POST'>
