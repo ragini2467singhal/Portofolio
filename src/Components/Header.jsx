@@ -173,7 +173,7 @@ const Header = () => {
             {/* RESUME */}
             <button id="resumeBTN">
               <a
-                href="#"
+                href="https://drive.google.com/file/d/1O1SqL-1AzYEBC0pHDzeefaVxSpPZFLLD/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -264,7 +264,7 @@ const Header = () => {
 
         <li>
           <a
-            href="#"
+            href="https://drive.google.com/file/d/1O1SqL-1AzYEBC0pHDzeefaVxSpPZFLLD/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
@@ -314,7 +314,7 @@ const Header = () => {
           })}
 
           <li>
-          <a href="https://drive.google.com/file/d/1LBIicbPUxcNj-MN7nJ1MogcpxniU67mz/" target='_blank' rel="noreferrer">
+          <a href="https://drive.google.com/file/d/1O1SqL-1AzYEBC0pHDzeefaVxSpPZFLLD/view?usp=sharing" target='_blank' rel="noreferrer">
                         RESUME
             </a>
           </li>

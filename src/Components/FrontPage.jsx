@@ -110,7 +110,7 @@ const FrontPage = () => {
               <RiExternalLinkFill />
             </motion.a>
             <motion.a
-              href="https://drive.google.com/file/d/1LBIicbPUxcNj-MN7nJ1MogcpxniU67mz/view?usp=sharing"
+              href="https://drive.google.com/file/d/1O1SqL-1AzYEBC0pHDzeefaVxSpPZFLLD/view?usp=sharing"
               rel="noreferrer"
               target="_blank"
               variants={textVariants}

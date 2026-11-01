@@ -67,7 +67,7 @@ const ContactMe = ({fadeInAnimationSection }) => {
             <img src={PhoneLogo} alt='Logo' />
             <p>+91-8448968259</p>
           </div>
-          <a href="https://drive.google.com/file/d/1LBIicbPUxcNj-MN7nJ1MogcpxniU67mz/" target='_blank' rel="noreferrer">
+          <a href="https://drive.google.com/file/d/1O1SqL-1AzYEBC0pHDzeefaVxSpPZFLLD/view?usp=sharing" target='_blank' rel="noreferrer">
             <button>Download Resume</button>
           </a>
         </div>
